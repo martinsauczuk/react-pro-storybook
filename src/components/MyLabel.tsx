@@ -13,23 +13,29 @@ interface Props {
     size?: 'normal' | 'h1' | 'h2' | 'h3';
 
     /**
-     * 
+     * All letter capitalized
      */
     allCaps?: boolean;
 
     /**
-     * 
+     * color
      */
     color?: 'primary' | 'secondary' | 'tertiary';
 
     /**
-     * 
+     * Font color
      */
     fontColor?: string;
 
+
+    /**
+     * Background color
+     */
+    backgroundColor: string;
+
 }
 
-export const MyLabel = ({ label, size = 'normal', color = 'primary', allCaps = false, fontColor = '#aaaaaa' }: Props) => {
+export const MyLabel = ({ label, size = 'normal', color = 'primary', allCaps = false, fontColor = '#aaaaaa', backgroundColor = 'transparent' }: Props) => {
 
 
     return (
@@ -37,7 +43,8 @@ export const MyLabel = ({ label, size = 'normal', color = 'primary', allCaps = f
             className={`${size} text-${color}`} 
             style={{ 
                 textTransform: `${allCaps == true ? 'uppercase' : 'none'}`,
-                color: fontColor
+                color: fontColor,
+                backgroundColor: backgroundColor
             }}>
             {label}
         </span>

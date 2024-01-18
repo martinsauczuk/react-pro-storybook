@@ -43,6 +43,15 @@ export const Secondary: Story = {
     }
 };
 
+export const CustomBackgroundColor: Story = {
+    args: {
+        label: 'CustomColor label',
+        size: 'normal',
+        fontColor: '#27d98e',
+        backgroundColor: 'black'
+    }
+};
+
 export const CustomColor: Story = {
     args: {
         label: 'CustomColor label',
