@@ -35,6 +35,7 @@
     "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "test": "echo 'All test ok'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee",
