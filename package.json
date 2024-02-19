@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee"
+    "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee",
+    "clean": "rimraf dist/"
   },
   "dependencies": {
     "init": "^0.1.2",
@@ -37,6 +38,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
