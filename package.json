@@ -1,5 +1,5 @@
 {
-  "name": "ms-custom-components",
+  "name": "martinsauczuk-custom-components",
   "private": false,
   "version": "0.0.1",
   "type": "module",
@@ -28,19 +28,16 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run clean & tsc",
+    "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee",
-    "clean": "rimraf dist/"
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
   },
-  "dependencies": {},
   "devDependencies": {
-    "storybook": "^7.6.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@storybook/addon-essentials": "^7.6.9",
     "@storybook/addon-interactions": "^7.6.9",
     "@storybook/addon-links": "^7.6.9",
@@ -55,11 +52,15 @@
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "chromatic": "^10.3.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
+    "storybook": "^7.6.16",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
