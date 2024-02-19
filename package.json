@@ -1,8 +1,10 @@
 {
   "name": "martinsauczuk-custom-components",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.1-rc6",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "react",
     "development",
@@ -11,8 +13,7 @@
   "license": "MIT",
   "homepage": "martinsauczuk.com",
   "repository": {
-    "url": "https://github.com/martinsauczuk/react-pro-storybook",
-    "type": "git"
+    "url": "git+https://github.com/martinsauczuk/react-pro-storybook.git"
   },
   "files": [
     "dist/"
@@ -23,8 +24,8 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "dev": "vite",
@@ -35,7 +36,8 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee",
     "clean": "rimraf dist/",
-    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
+    "push:npm": "np"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.9",
@@ -57,6 +59,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "np": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
