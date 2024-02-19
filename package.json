@@ -1,11 +1,34 @@
 {
-  "name": "my-story-book",
-  "private": true,
-  "version": "0.0.0",
+  "name": "ms-custom-components",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "keywords": [
+    "react",
+    "development",
+    "do not use"
+  ],
+  "license": "MIT",
+  "homepage": "martinsauczuk.com",
+  "repository": {
+    "url": "https://github.com/martinsauczuk/react-pro-storybook",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run clean & tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -13,13 +36,11 @@
     "chromatic": "npx chromatic --project-token=chpt_e2b580b6c7cfaee",
     "clean": "rimraf dist/"
   },
-  "dependencies": {
-    "init": "^0.1.2",
+  "dependencies": {},
+  "devDependencies": {
+    "storybook": "^7.6.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.6.9"
-  },
-  "devDependencies": {
     "@storybook/addon-essentials": "^7.6.9",
     "@storybook/addon-interactions": "^7.6.9",
     "@storybook/addon-links": "^7.6.9",
